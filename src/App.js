@@ -9,6 +9,7 @@ function App() {
   const { data = [], isLoading } = useGetGoodsQuery(count);
   const [addProduct, { isError }] = useAddProductMutation(newProduct)
   const [deleteProduct] = useDeleteProductMutation()
+  const afon = 'afon'
 
   const handleDeleteProduct = async (id) => {
     await deleteProduct(id);
